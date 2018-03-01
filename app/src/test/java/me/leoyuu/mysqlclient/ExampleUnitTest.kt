@@ -15,11 +15,6 @@ import org.junit.BeforeClass
  */
 class ExampleUnitTest {
     companion object {
-        private const val HOST = "118.190.98.99"
-        private const val PORT = 3306
-        private const val USER = "leoyuu"
-        private const val PASSWORD = ""
-
     }
 
 
