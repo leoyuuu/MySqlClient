@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/confirm_dialog_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/md_black_color_code"
+        android:textSize="24sp"
+        android:text="@string/tip"/>
+
+    <TextView
+        android:id="@+id/confirm_dialog_content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.ButtonBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/confirm_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_white_color_code"
+            android:text="@string/cancel"
+            style="?buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/confirm_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_white_color_code"
+            android:text="@string/ok"
+            style="?buttonBarButtonStyle"/>
+    </android.support.v7.widget.ButtonBarLayout>
+
+</LinearLayout>

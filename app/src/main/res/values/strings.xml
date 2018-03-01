@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Remote MySql</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to start -->
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="default_host">127.0.0.1</string>
+    <string name="default_port">3306</string>
+    <string name="default_user">root</string>
+
+
+    <string name="action_test">测试</string>
+
+    <string name="title_activity_table_view">表</string>
+    <string name="action_settings">Settings</string>
+    <string name="db_item_prompt">数据项</string>
+    <string name="db_name_empty">数据库名为空</string>
+    <string name="db_or_table_name_empty">数据库或表名为空</string>
+
+    <string name="sql_et_prompt">这里输入SQL命令语句</string>
+    <string name="sql_res_clear">清除</string>
+    <string name="sql_cmd_do">执行</string>
+    <string name="title_activity_sql_cmd">命令行</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_host">主机IP</string>
+    <string name="prompt_port">主机端口</string>
+    <string name="prompt_name">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_connect">连接数据库</string>
+
+    <string name="main_loading">加载中</string>
+    <string name="main_title">数据库</string>
+    <string name="action_cmd">命令行界面</string>
+    <string name="action_view_record">查看记录</string>
+    <string name="action_db_new">新建数据库</string>
+    <string name="action_db_add_table">新建表</string>
+    <string name="action_db_alter_name">修改名称</string>
+    <string name="action_db_del">删除数据库</string>
+    <string name="action_table_alter_name">修改表名</string>
+    <string name="action_table_design">重新设计表</string>
+    <string name="action_table_del">删除表</string>
+
+    <string name="db_item_more">更多</string>
+
+    <string name="record_title">访问日志</string>
+
+    <string name="table_design_new">新建表</string>
+    <string name="table_design_example">CREATE TABLE student(\n    id INT(4) AUTO_INCREMENT,\n    name VARCHAR(32) NOT NULL, \n    PRIMARY KEY(id)\n)DEFAULT CHARSET=utf8</string>
+
+
+    <string name="table_name">表名</string>
+    <string name="table_col_name">列名</string>
+    <string name="table_col_type">数据类型</string>
+    <string name="table_col_len">数据长度</string>
+    <string name="table_col_default">默认值</string>
+    <string name="table_col_nonnull">不空</string>
+    <string name="table_col_primary_key">主键</string>
+    <string name="table_col_auto_inc">自增</string>
+    <string name="table_col_comment">备注</string>
+    <string name="table_col_scale">scale</string>
+
+    <string name="table_col_add">添加行</string>
+    <string name="table_col_del">删除行</string>
+
+    <string name="row_detail_col">列信息</string>
+    <string name="row_detail_value">列值</string>
+
+    <string name="col_id">id</string>
+    <string name="col_name">name</string>
+    <string name="col_dialog_title">详情</string>
+
+
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+    <string name="tip">提示</string>
+    <string name="refresh">刷新</string>
+    <string name="modify">修改</string>
+    <string name="more">更多</string>
+    <string name="finish">完成</string>
+
+
+    <string name="about">关于</string>
+    <string name="about_string">"        本软件是一款简单的数据库连接查看软件，提供简单的数据库连接功能，使用 java jdbc 方式实现
+        本软件不会收集用户的任何信息"
+    </string>
+
+    <string name="test_text_middle">"hello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world"</string>
+
+    <string name="large_test_text">"hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n
+        hello world\n"
+    </string>
+</resources>

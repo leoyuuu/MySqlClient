@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/md_white_color_code"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/db_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|start"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        tools:text="hello world"/>
+
+    <ImageButton
+        android:id="@+id/db_more"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/md_white_color_code"
+        android:contentDescription="@string/db_item_more"
+        android:scaleType="centerInside"
+        android:tint="@color/md_grey_600_color_code"
+        app:srcCompat="@drawable/abc_ic_menu_more_overflow" />
+
+</RelativeLayout>

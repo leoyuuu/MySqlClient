@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:baselineAligned="false"
+    android:background="@color/md_white_color_code"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/shape_border_grey">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/table_col_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/shape_border_grey">
+
+        <TextView
+            android:id="@+id/table_col_type_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/shape_border_grey">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/table_col_len_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:inputType="number"
+            android:textSize="12sp"
+            tools:text="32" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_border_grey">
+
+        <CheckBox
+            android:id="@+id/table_col_nonnull_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checked="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_border_grey">
+
+        <CheckBox
+            android:id="@+id/table_col_primary_key_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checked="false" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_border_grey">
+
+        <ImageButton
+            android:id="@+id/table_col_more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/more"
+            android:layout_centerInParent="true"
+            android:tint="@color/md_grey_700_color_code"
+            android:backgroundTint="@color/md_white_color_code"
+            app:srcCompat="@drawable/abc_ic_menu_more_overflow" />
+    </RelativeLayout>
+</LinearLayout>
