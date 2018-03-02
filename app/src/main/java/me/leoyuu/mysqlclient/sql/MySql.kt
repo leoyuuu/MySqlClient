@@ -3,6 +3,8 @@ package me.leoyuu.mysqlclient.sql
 import android.os.Handler
 import android.os.HandlerThread
 import android.os.Looper
+import me.leoyuu.mysqlclient.store.DbHelper
+import me.leoyuu.mysqlclient.store.entity.RecorderModel
 import java.io.IOException
 import java.sql.Connection
 import java.sql.DriverManager
@@ -14,12 +16,7 @@ import java.sql.SQLException
  *
  * @author leoyuu
  */
-class MySql {
-    private val conn:Connection;
-
-    private constructor(conn:Connection){
-        this.conn = conn
-    }
+class MySql(private val conn: Connection) {
 
     fun showTableColumns(dbName:String, tableName:String, callback: ResultCallback) = postSqlCmd(getTableColumnsInfo(dbName, tableName), callback)
     fun alterTableName(dbName:String, tableName:String, newTableName:String, callback: ResultCallback) = postSqlCmd(getAlterTableNameSql(dbName, tableName, newTableName), callback)
@@ -62,12 +59,15 @@ class MySql {
                     } }))
                 }
                 val res = SqlResult(affectingRow = sqlRows.size, cmdType = SqlResult.CMD_TYPE_QUERY, queryTitle = QueryTitle(sqlTitle), queryContent = sqlRows.toList(), sql = cmd)
+                DbHelper.saveRecorder(RecorderModel(cmd = cmd, result = res.toString()))
                 doResult(callback, res)
             } else {
                 val rs = conn.createStatement().executeUpdate(cmd)
+                DbHelper.saveRecorder(RecorderModel(cmd = cmd, result = "affect $rs"))
                 doResult(callback, SqlResult(affectingRow = rs, sql = cmd))
             }
         } catch (e:SQLException){
+            DbHelper.saveRecorder(RecorderModel(cmd = cmd, result = e.localizedMessage))
             doResult(callback, SqlResult(SqlResult.ERR_SQL, e.localizedMessage, sql = cmd))
         } catch (e:Exception) {
             mySqlInternal = null

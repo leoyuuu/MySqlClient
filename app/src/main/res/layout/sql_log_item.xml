@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context="me.leoyuu.mysqlclient.module.log.LogActivity">
+
+    <TextView
+        android:id="@+id/sql_log_item_sql"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:textColor="@color/md_black_color_code"
+        android:textIsSelectable="true"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/sql_log_item_res"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:textColor="@color/md_black_color_code"
+        android:textIsSelectable="true"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/sql_log_item_time"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@color/md_black_color_code"
+        android:textSize="12sp"
+        tools:text="2018.01.23 12:12:32" />
+</LinearLayout>
