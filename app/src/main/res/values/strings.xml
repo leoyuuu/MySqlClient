@@ -15,6 +15,7 @@
     <string name="default_host">127.0.0.1</string>
     <string name="default_port">3306</string>
     <string name="default_user">root</string>
+    <string name="start_tip">手机可以连接在同一 wifi 下的电脑的 mysql. 只需要知道在 wifi 下的电脑的 IP即可, 如 192.168.1.105等。</string>
 
 
     <string name="action_test">测试</string>
@@ -30,12 +31,13 @@
     <string name="sql_cmd_do">执行</string>
     <string name="title_activity_sql_cmd">命令行</string>
 
-    <!-- Strings related to login -->
     <string name="prompt_host">主机IP</string>
     <string name="prompt_port">主机端口</string>
     <string name="prompt_name">用户名</string>
     <string name="prompt_password">密码</string>
     <string name="action_connect">连接数据库</string>
+
+    <string name="table_detail_tip">当前单次只查看前 50 条，可以根据历史记录到命令行界面更改然后查看所有条目，也可以通过右上角导出到 csv 文件然后进行查看</string>
 
     <string name="main_loading">加载中</string>
     <string name="main_title">数据库</string>
@@ -86,13 +88,14 @@
     <string name="modify">修改</string>
     <string name="more">更多</string>
     <string name="finish">完成</string>
+    <string name="export">导出</string>
 
 
     <string name="about">关于</string>
     <string name="about_string">"    本软件是一款简单的数据库连接查看软件，提供简单的数据库连接功能，并支持导出到 csv 文件，使用 java jdbc 方式实现
     本软件不会收集用户的任何信息
     本软件所有执行过的 sql 命令都存在于历史记录中，用户可以查看
-    未经用户对 sql 确认，本软件不执行与修改表格或数据库相关的 sql 命令
+    请勿使用本软件对重要数据库进行修改或删除相关操作
     本软件源码：
         https://github.com/leoyuuu/MySqlClient
 

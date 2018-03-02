@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="me.leoyuu.mysqlclient.module.table.TableDetailActivity">
+    <item
+        android:id="@+id/action_db_table_export"
+        android:icon="@drawable/ic_open"
+        android:orderInCategory="1"
+        android:title="@string/export" />
+</menu>

@@ -98,6 +98,13 @@
 
             </android.support.design.widget.TextInputLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/start_tip"
+                android:textColor="@color/md_grey_500_color_code"
+                android:textSize="12sp" />
             <Button
                 android:id="@+id/connect_btn"
                 style="?android:textAppearanceSmall"

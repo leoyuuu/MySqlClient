@@ -34,6 +34,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/table_detail_tip_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/table_detail_tip"
+                android:textColor="@color/md_grey_500_color_code"
+                android:textSize="12sp" />
+
             <TextView
                 android:id="@+id/table_detail_info_tv"
                 android:layout_width="match_parent"
