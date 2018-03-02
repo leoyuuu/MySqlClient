@@ -163,11 +163,13 @@ class TableDetailActivity : AppCompatActivity() {
         title.titles.forEach {
             sb.append("\"${it.name}\",")
         }
+        sb.deleteCharAt(sb.lastIndex)
         sb.append('\n')
         content.forEach {
             it.items.forEach { item ->
                 sb.append("\"$item\",")
             }
+            sb.deleteCharAt(sb.lastIndex)
             sb.append('\n')
             if (sb.length > 1024 * 1024) {
                 os.write(sb.toString().toByteArray())
