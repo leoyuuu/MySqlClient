@@ -14,20 +14,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/title_activity_table_view" />
+        app:title="@string/title_activity_table_view"
+        app:titleTextColor="@color/title_text_color" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/table_detail_toolbar"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/table_detail_toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,16 +38,16 @@
                 android:id="@+id/table_detail_info_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textIsSelectable="true"
-                android:textColor="@color/md_black_color_code"/>
+                android:textColor="@color/md_black_color_code"
+                android:textIsSelectable="true" />
 
             <me.leoyuu.mysqlclient.widget.table.SqlTableView
                 android:id="@+id/table_detail_table_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginTop="8dp" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

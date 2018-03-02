@@ -1,6 +1,5 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,7 +9,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="8dp"
-        app:title="@string/table_design_new" />
+        app:title="@string/table_design_new"
+        app:titleTextColor="@color/title_text_color" />
 
     <Button
         android:id="@+id/table_design_create_btn"
@@ -18,8 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/finish"
         android:backgroundTint="@color/colorPrimary"
+        android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -28,11 +28,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toTopOf="@id/table_design_create_btn"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/table_design_toolbar"
-        android:elevation="2dp" />
+        app:layout_constraintTop_toBottomOf="@id/table_design_toolbar" />
 
 
 </android.support.constraint.ConstraintLayout>

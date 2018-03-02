@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/md_light_green_400_color_code</color>
-    <color name="colorPrimaryDark">@color/md_light_green_400_color_code</color>
-    <color name="colorAccent">@color/md_purple_a200_color_code</color>
+    <color name="colorPrimary">@color/md_brown_300_color_code</color>
+    <color name="colorPrimaryDark">@color/md_brown_300_color_code</color>
+    <color name="colorAccent">@color/md_teal_500_color_code</color>
 
+    <color name="title_text_color">@color/md_white_color_code</color>
 
 
     <!-- red -->

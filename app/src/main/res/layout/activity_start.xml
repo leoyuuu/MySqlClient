@@ -6,11 +6,12 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/start_tool_bar"
-        android:elevation="8dp"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:title="@string/action_connect"/>
+        android:elevation="8dp"
+        app:title="@string/action_connect"
+        app:titleTextColor="@color/title_text_color" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -19,10 +20,10 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        app:layout_constraintTop_toBottomOf="@id/start_tool_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/start_tool_bar">
 
         <LinearLayout
             android:id="@+id/email_login_form"
@@ -31,9 +32,9 @@
             android:orientation="vertical">
 
             <android.support.design.widget.TextInputLayout
-                android:hint="@string/prompt_host"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_host">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/host_et"
@@ -48,9 +49,9 @@
 
 
             <android.support.design.widget.TextInputLayout
-                android:hint="@string/prompt_port"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_port">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/port_et"
@@ -80,9 +81,9 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:hint="@string/prompt_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/password_et"
@@ -103,8 +104,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/action_connect"
                 android:backgroundTint="@color/colorAccent"
+                android:text="@string/action_connect"
                 android:textColor="@color/md_white_color_code"
                 android:textSize="16sp" />
         </LinearLayout>

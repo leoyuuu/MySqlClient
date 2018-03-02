@@ -13,16 +13,17 @@
             android:id="@+id/record_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll"
             app:title="@string/record_title"
-            app:layout_scrollFlags="scroll"/>
+            app:titleTextColor="@color/title_text_color" />
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/record_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingStart="8dp"
         android:paddingEnd="8dp"
+        android:paddingStart="8dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 </android.support.design.widget.CoordinatorLayout>
