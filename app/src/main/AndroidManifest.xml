@@ -46,7 +46,7 @@
 
         <activity android:name=".module.about.AboutActivity"
             android:label="@string/about">
-            <intent-filter android:label="@string/filter_title_viewgizmos">
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
