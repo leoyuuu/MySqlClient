@@ -1,12 +1,8 @@
 package me.leoyuu.mysqlclient
 
-import me.leoyuu.mysqlclient.sql.MySql
-import me.leoyuu.mysqlclient.sql.ResultCallback
-import me.leoyuu.mysqlclient.sql.SqlResult
-import org.junit.Test
 
-import org.junit.Assert.*
-import org.junit.BeforeClass
+import org.junit.Assert.assertTrue
+import org.junit.Test
 
 /**
  * Example local unit test, which will execute on the development machine (host).

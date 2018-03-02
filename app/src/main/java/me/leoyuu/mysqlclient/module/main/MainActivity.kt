@@ -1,7 +1,7 @@
 package me.leoyuu.mysqlclient.module.main
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             R.id.action_db_new -> showCreateDbDialog()
             R.id.action_refresh -> adapter.refresh()
             R.id.action_view_record ->JumpUtil.gotoLogActivity(this)
+            R.id.action_view_about -> JumpUtil.gotoAboutActivity(this)
         }
         return true
     }

@@ -16,7 +16,7 @@
 
     <item
         android:id="@+id/action_refresh"
-        android:orderInCategory="4"
+        android:orderInCategory="3"
         android:title="@string/refresh"
         app:showAsAction="never" />
 
@@ -26,4 +26,9 @@
         android:title="@string/action_view_record"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_view_about"
+        android:orderInCategory="5"
+        android:title="@string/about"
+        app:showAsAction="never" />
 </menu>

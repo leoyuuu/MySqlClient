@@ -5,9 +5,10 @@ import android.content.Intent
 import android.text.TextUtils
 import me.leoyuu.mysqlclient.R
 import me.leoyuu.mysqlclient.TestActivity
+import me.leoyuu.mysqlclient.module.about.AboutActivity
 import me.leoyuu.mysqlclient.module.design.TableDesignActivity
-import me.leoyuu.mysqlclient.module.main.MainActivity
 import me.leoyuu.mysqlclient.module.log.LogActivity
+import me.leoyuu.mysqlclient.module.main.MainActivity
 import me.leoyuu.mysqlclient.module.sqlcmd.SqlCmdActivity
 import me.leoyuu.mysqlclient.module.table.TableDetailActivity
 
@@ -22,6 +23,7 @@ object JumpUtil {
     fun gotoCmdActivity(context: Context) = context.startActivity(Intent(context, SqlCmdActivity::class.java))
     fun gotoMainActivity(context: Context) = context.startActivity(Intent(context, MainActivity::class.java))
     fun gotoLogActivity(context: Context) = context.startActivity(Intent(context, LogActivity::class.java))
+    fun gotoAboutActivity(context: Context) = context.startActivity(Intent(context, AboutActivity::class.java))
     fun gotoTestActivity(context: Context) = context.startActivity(Intent(context, TestActivity::class.java))
 
     fun gotoTableDesignActivity(context: Context, dbName: String, tableName: String? = null){

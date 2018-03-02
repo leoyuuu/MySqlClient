@@ -89,8 +89,16 @@
 
 
     <string name="about">关于</string>
-    <string name="about_string">"        本软件是一款简单的数据库连接查看软件，提供简单的数据库连接功能，使用 java jdbc 方式实现
-        本软件不会收集用户的任何信息"
+    <string name="about_string">"    本软件是一款简单的数据库连接查看软件，提供简单的数据库连接功能，并支持导出到 csv 文件，使用 java jdbc 方式实现
+    本软件不会收集用户的任何信息
+    本软件所有执行过的 sql 命令都存在于历史记录中，用户可以查看
+    未经用户对 sql 确认，本软件不执行与修改表格或数据库相关的 sql 命令
+    本软件源码：
+        https://github.com/leoyuuu/MySqlClient
+
+    欢迎提交 ISSUE
+    Tip: 如果需要连接到自己电脑的 mysql，请保证自己的电脑和自己的手机处于同一网关内，通俗而言，即处于同一wifi下
+    可以通过 ipconfig(windows)/ifconfig(unix) 查看自己的局域网 IP 地址"
     </string>
 
     <string name="test_text_middle">"hello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world\nhello world"</string>
