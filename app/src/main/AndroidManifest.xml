@@ -8,6 +8,7 @@
     <application
         android:name=".App"
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -44,7 +45,19 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".module.about.AboutActivity"
-            android:label="@string/about"/>
+            android:label="@string/about">
+            <intent-filter android:label="@string/filter_title_viewgizmos">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="118.190.98.99"
+                    android:pathPrefix="/mysql_client"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
 
     </application>
 
