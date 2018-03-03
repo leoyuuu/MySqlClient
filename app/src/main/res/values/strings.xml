@@ -89,7 +89,10 @@
     <string name="more">更多</string>
     <string name="finish">完成</string>
     <string name="export">导出</string>
+    <string name="loading">加载中</string>
+    <string name="loading_progress">%d/%d</string>
 
+    <string name="full_table_name">%s.%s</string>
 
     <string name="about">关于</string>
     <string name="about_string">"    本软件是一款简单的数据库连接查看软件，提供简单的数据库连接功能，并支持导出到 csv 文件，使用 java jdbc 方式实现

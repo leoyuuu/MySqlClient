@@ -70,7 +70,6 @@ class MySql(private val conn: Connection) {
             DbHelper.saveRecorder(RecorderModel(cmd = cmd, result = e.localizedMessage))
             doResult(callback, SqlResult(SqlResult.ERR_SQL, e.localizedMessage, sql = cmd))
         } catch (e:Exception) {
-            mySqlInternal = null
             doResult(callback, SqlResult(SqlResult.ERR_IO, e.localizedMessage, sql = cmd))
         }
     }
@@ -81,7 +80,7 @@ class MySql(private val conn: Connection) {
 
         private lateinit var sqlHandler:Handler
 
-        fun getSql(): MySql? {
+        fun getSql(): MySql {
             return mySqlInternal
         }
 
@@ -112,7 +111,7 @@ class MySql(private val conn: Connection) {
 
         private fun doResult(callback: ResultCallback, result: SqlResult) = uiHandler.post { callback.onResult(result) }
 
-        private var mySqlInternal: MySql? = null
+        private lateinit var mySqlInternal: MySql
 
         private const val DRIVER_NAME = "com.mysql.jdbc.Driver"
 

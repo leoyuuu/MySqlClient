@@ -25,7 +25,7 @@ class TableDesignView @JvmOverloads constructor(context: Context, attrs: Attribu
 
     private val sqlCols = mutableListOf<SqlCol>()
     private val adapter = TableColAdapter()
-    private var dbName:String = ""
+    private var dbName = ""
     private var tableName = ""
 
     init {
@@ -41,8 +41,9 @@ class TableDesignView @JvmOverloads constructor(context: Context, attrs: Attribu
 
     fun bindTable(tableName:String){
         this.tableName = tableName
-        table_design_table_name_et.setText("$dbName.$tableName")
-        MySql.getSql()?.showTableColumns(dbName, tableName, object : ResultCallback{
+
+        table_design_table_name_et.setText(context.getString(R.string.full_table_name, dbName, tableName))
+        MySql.getSql().showTableColumns(dbName, tableName, object : ResultCallback {
             override fun onResult(result: SqlResult) {
                 if (result.sqlOK) {
                     visibility = View.VISIBLE
@@ -73,13 +74,11 @@ class TableDesignView @JvmOverloads constructor(context: Context, attrs: Attribu
             Util.showToast("表名不能为空")
             return ""
         }
-        var fullName = ""
-        if (tableName.contains('.')){
-            fullName = tableName
+        val fullName: String = if (tableName.contains('.')) {
+            tableName
         } else {
-            fullName = dbName + "." + tableName
+            dbName + "." + tableName
         }
-
         return "CREATE TABLE $fullName (\n${adapter.getColsSql().replace("{table_name}", fullName)})DEFAULT CHARSET=utf8"
     }
 }

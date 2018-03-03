@@ -7,10 +7,6 @@ import me.leoyuu.mysqlclient.R
 import me.leoyuu.mysqlclient.model.BaseModel
 import me.leoyuu.mysqlclient.model.DbModel
 import me.leoyuu.mysqlclient.model.TableModel
-import me.leoyuu.mysqlclient.sql.MySql
-import me.leoyuu.mysqlclient.sql.ResultCallback
-import me.leoyuu.mysqlclient.sql.SqlResult
-import me.leoyuu.mysqlclient.util.Util
 
 /**
  * date 2018/2/26
@@ -84,31 +80,6 @@ class DbAdapter:RecyclerView.Adapter<BaseDbHolder>() {
                 model.tableStatus = DbModel.TABLE_STATUS_SHOW
             }
         }
-    }
-
-    fun refresh(){
-        clear()
-
-        MySql.getSql()?.showDataBases(object : ResultCallback {
-            override fun onResult(result: SqlResult) {
-                if (result.sqlOK) {
-                    val dbs = result.queryContent?.filter { it.items[0] != null }?.map { it.items[0] as String }
-
-                    dbs?.forEach {
-                        MySql.getSql()?.showTables(it, object : ResultCallback {
-                            override fun onResult(result: SqlResult) {
-                                val tables = result.queryContent
-                                if (result.sqlOK && tables != null){
-                                    addDb(DbModel(it, tables.map { table -> TableModel(table.items[0]!!) }.toMutableList()))
-                                }
-                            }
-                        })
-                    }
-                } else {
-                    Util.showToast("获取数据库信息失败，请退出app后打开重试")
-                }
-            }
-        })
     }
 
     companion object {

@@ -11,6 +11,7 @@ import me.leoyuu.mysqlclient.sql.SqlResult
 import me.leoyuu.mysqlclient.util.JumpUtil
 import me.leoyuu.mysqlclient.util.PrefUtil
 import me.leoyuu.mysqlclient.util.Util
+import me.leoyuu.mysqlclient.widget.dialog.DialogLoading
 
 /**
  * date 2018/2/25
@@ -73,6 +74,9 @@ class StartActivity : AppCompatActivity() {
             return
         }
         loading = true
+        val dialog = DialogLoading()
+        dialog.title = "连接中"
+        dialog.show(fragmentManager, "start")
         MySql.init(host_et.text.toString(), port_et.text.toString().toInt(), user_et.text.toString(), password_et.text.toString(), object : ResultCallback{
             override fun onResult(result: SqlResult) {
                 if (result.sqlOK){
@@ -84,6 +88,7 @@ class StartActivity : AppCompatActivity() {
                 } else {
                     Util.showToast(result.errMsg)
                 }
+                dialog.dismiss()
                 loading = false
             }
         })

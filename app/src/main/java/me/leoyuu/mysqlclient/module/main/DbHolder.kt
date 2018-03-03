@@ -49,7 +49,7 @@ class DbHolder(v: View) : BaseDbHolder(v){
                     DialogConfirm.showDialog(itemView.context, "确认删除数据库 ${model.name}？ 删除数据库后无法恢复。", object : DialogConfirm.ConfirmCallback{
                         override fun onCancel() {}
                         override fun onSure() {
-                            MySql.getSql()?.delDb(model.name, object : ResultCallback{
+                            MySql.getSql().delDb(model.name, object : ResultCallback {
                                 override fun onResult(result: SqlResult) {
                                     if (result.sqlOK) {
                                         Util.showToast("删除成功")

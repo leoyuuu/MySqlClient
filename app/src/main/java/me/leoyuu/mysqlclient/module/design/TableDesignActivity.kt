@@ -46,7 +46,7 @@ class TableDesignActivity : AppCompatActivity() {
                 override fun onCancel() {}
 
                 override fun onSure(content: String) {
-                    MySql.getSql()?.doSqlCmd(content, object :ResultCallback{
+                    MySql.getSql().doSqlCmd(content, object : ResultCallback {
                         override fun onResult(result: SqlResult) {
                             if (result.sqlOK){
                                 Util.showToast("执行成功，请刷新查看")

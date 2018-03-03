@@ -4,17 +4,13 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.text.TextUtils
-import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.widget.Toast
-import me.leoyuu.mysqlclient.R
-
 import kotlinx.android.synthetic.main.activity_sql_cmd.*
-import me.leoyuu.mysqlclient.model.BaseModel
+import me.leoyuu.mysqlclient.R
 import me.leoyuu.mysqlclient.sql.MySql
 import me.leoyuu.mysqlclient.sql.ResultCallback
 import me.leoyuu.mysqlclient.sql.SqlResult
-import java.util.*
+import me.leoyuu.mysqlclient.widget.dialog.DialogLoading
 
 class SqlCmdActivity : AppCompatActivity() {
 
@@ -43,17 +39,15 @@ class SqlCmdActivity : AppCompatActivity() {
             Toast.makeText(this, "Sql 命令为空", Toast.LENGTH_SHORT).show()
             return
         }
-
-        val sql = MySql.getSql()
-        if (sql == null){
-            Toast.makeText(this, "连接已断开，请返回重连", Toast.LENGTH_SHORT).show()
-        } else {
-            sql.doSqlCmd(sql_cmd.text.toString(), object :ResultCallback{
-                override fun onResult(result: SqlResult) {
-                    adapter.add(result)
-                    sql_cmd_res_list.scrollToPosition(adapter.itemCount - 1)
-                }
-            })
-        }
+        val loading = DialogLoading()
+        loading.title = "执行中"
+        loading.show(fragmentManager, "执行sql")
+        MySql.getSql().doSqlCmd(sql_cmd.text.toString(), object : ResultCallback {
+            override fun onResult(result: SqlResult) {
+                adapter.add(result)
+                sql_cmd_res_list.scrollToPosition(adapter.itemCount - 1)
+                loading.show(fragmentManager, "执行sql")
+            }
+        })
     }
 }

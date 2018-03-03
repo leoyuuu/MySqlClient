@@ -29,8 +29,8 @@ class DialogConfirm : DialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setStyle(STYLE_NO_TITLE, android.R.style.Theme_Material_Light_Dialog_Alert)
-
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.dialog_confirm, container, false)
     }
@@ -48,11 +48,11 @@ class DialogConfirm : DialogFragment() {
         }
 
         confirm_ok_btn.setOnClickListener {
-            callback.onSure();
+            callback.onSure()
             dismiss()
         }
         confirm_cancel_btn.setOnClickListener {
-            callback.onCancel();
+            callback.onCancel()
             dismiss()
         }
     }

@@ -50,7 +50,7 @@ class TableHolder(v: View) : BaseDbHolder(v){
                     DialogProvideString.showDialog(itemView.context, "表名", "修改表名", contentValue = tableModel.tableName, callback = object : DialogProvideString.ConfirmCallback {
                         override fun onCancel() {}
                         override fun onSure(content: String) {
-                            MySql.getSql()?.alterTableName(tableModel.dbModel.name, tableModel.tableName, content, object : ResultCallback{
+                            MySql.getSql().alterTableName(tableModel.dbModel.name, tableModel.tableName, content, object : ResultCallback {
                                 override fun onResult(result: SqlResult) {
                                     if (result.sqlOK){
                                         tableModel.tableName = content
@@ -71,7 +71,7 @@ class TableHolder(v: View) : BaseDbHolder(v){
                         override fun onCancel() {}
 
                         override fun onSure() {
-                            MySql.getSql()?.deleteTable(tableModel.dbModel.name, tableModel.tableName, object :ResultCallback{
+                            MySql.getSql().deleteTable(tableModel.dbModel.name, tableModel.tableName, object : ResultCallback {
                                 override fun onResult(result: SqlResult) {
                                     if (result.sqlOK){
                                         adapter.removeItem(adapterPosition)
