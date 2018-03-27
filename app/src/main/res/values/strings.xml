@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Remote MySql</string>
+    <string name="app_name">MySql Cat</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to start -->
@@ -12,7 +12,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="default_host">127.0.0.1</string>
+    <string name="default_host">192.168.0.5</string>
     <string name="default_port">3306</string>
     <string name="default_user">root</string>
     <string name="start_tip">手机可以连接在同一 wifi 下的电脑的 mysql. 只需要知道在 wifi 下的电脑的 IP即可, 如 192.168.1.105等。</string>

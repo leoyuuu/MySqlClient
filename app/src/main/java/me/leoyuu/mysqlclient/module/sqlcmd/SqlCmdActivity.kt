@@ -46,7 +46,7 @@ class SqlCmdActivity : AppCompatActivity() {
             override fun onResult(result: SqlResult) {
                 adapter.add(result)
                 sql_cmd_res_list.scrollToPosition(adapter.itemCount - 1)
-                loading.show(fragmentManager, "执行sql")
+                loading.dismiss()
             }
         })
     }

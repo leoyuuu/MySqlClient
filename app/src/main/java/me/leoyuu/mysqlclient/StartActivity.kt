@@ -8,9 +8,7 @@ import kotlinx.android.synthetic.main.activity_start.*
 import me.leoyuu.mysqlclient.sql.MySql
 import me.leoyuu.mysqlclient.sql.ResultCallback
 import me.leoyuu.mysqlclient.sql.SqlResult
-import me.leoyuu.mysqlclient.util.JumpUtil
-import me.leoyuu.mysqlclient.util.PrefUtil
-import me.leoyuu.mysqlclient.util.Util
+import me.leoyuu.mysqlclient.util.*
 import me.leoyuu.mysqlclient.widget.dialog.DialogLoading
 
 /**
@@ -74,6 +72,7 @@ class StartActivity : AppCompatActivity() {
             return
         }
         loading = true
+        reportUmeng(this, UMENG_EVENT_CONNECT)
         val dialog = DialogLoading()
         dialog.title = "连接中"
         dialog.show(fragmentManager, "start")

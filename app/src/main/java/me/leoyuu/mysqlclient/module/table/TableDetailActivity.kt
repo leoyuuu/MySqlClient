@@ -50,7 +50,7 @@ class TableDetailActivity : AppCompatActivity() {
                 if (result.sqlOK){
                     loading.title = "加载表数据"
                     table_detail_info_tv.text = result.queryContent!![0].items[1]
-                    MySql.getSql().showTable(dbName, tableName, 0, 50, object : ResultCallback {
+                    MySql.getSql().showTable(dbName, tableName, 0, Int.MAX_VALUE, object : ResultCallback {
                         override fun onResult(result: SqlResult) {
                             if (result.sqlOK) {
                                 table_detail_table_view.bindData(result.queryTitle!!, result.queryContent!!)
