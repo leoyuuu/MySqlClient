@@ -22,7 +22,7 @@ class App:Application() {
         Thread.setDefaultUncaughtExceptionHandler { _, e -> MobclickAgent.reportError(this@App, e) }
 
 
-        handleLifeCircle();
+        handleLifeCircle()
     }
 
 
